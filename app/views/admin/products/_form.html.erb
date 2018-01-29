@@ -1,10 +1,14 @@
 <div class="panel-body">
-<%= simple_form_for [:admin, @products] do |f| %>
+<%= simple_form_for [:admin, @products] , html: { multipart: true } do |f| %>
     <div class="form-group">
         <%= f.input :title, label: "產品名稱", input_html: { class: "form-control" }%>
         <%= f.input :description, label: "產品內容", input_html: { class: "form-control" }%>        
         <%= f.input :quantity, label: "庫存", input_html: { class: "form-control" }%>        
         <%= f.input :price, label: "售價", input_html: { class: "form-control" }%>                
+        <%= f.input :image, label: "商品圖片", multiple: true %>    
+
+        <%= image_tag(@products.image.thumb.url.to_s) if @products.image.present?  %>      
+                                  
     </div>
     <%= f.submit "送出", class: "btn btn-primary", data: {disable_with: "送出..."}%>
 <% end %>
