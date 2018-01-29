@@ -1,6 +1,7 @@
 class Admin::ProductsController < ApplicationController
     before_action :authenticate_user!, only: [:new,:create,:show,:edit,:update,:destroy ]
     before_action :find_products_id, only: [:show,:edit,:update,:destroy ]
+    before_action :admin_required
     def index
         @products = Product.all.descbycreatetime.paginate(page: params[:page], per_page: 5 )        
     end
