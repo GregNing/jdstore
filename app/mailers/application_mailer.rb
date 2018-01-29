@@ -1,4 +1,5 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'from@example.com'
-  layout 'mailer'
+    # 设定通知订单成立的寄信功能
+    default from: "service@jdstore.com"
+   layout 'mailer'
 end
