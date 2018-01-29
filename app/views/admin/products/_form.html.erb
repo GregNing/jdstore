@@ -4,9 +4,8 @@
         <%= f.input :title, label: "產品名稱", input_html: { class: "form-control" }%>
         <%= f.input :description, label: "產品內容", input_html: { class: "form-control" }%>        
         <%= f.input :quantity, label: "庫存", input_html: { class: "form-control" }%>        
-        <%= f.input :price, label: "售價", input_html: { class: "form-control" }%>                
-        <%= f.input :image, label: "商品圖片", multiple: true %>    
-
+        <%= f.input :price, label: "售價", input_html: { class: "form-control" }%>                        
+        <%= f.input :image, label: "商品圖片", as: :file %>
         <%= image_tag(@products.image.thumb.url.to_s) if @products.image.present?  %>      
                                   
     </div>
