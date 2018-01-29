@@ -16,7 +16,7 @@
     <div> 數量 : <%= @products.quantity %> </div>
     <div class="product-price"> ￥ <%= @products.price %> </div>
     <div class="pull-right">
-      <%= link_to("加入購物車", "#", :class => "btn btn-danger btn-lg") %>
+      <%= link_to("加入購物車", add_to_cart_product_path(@products), :method => :post, :class => "btn btn-primary btn-lg btn-danger") %>
     <%= link_to "回首頁", products_path,  class: "btn btn-primary", style: "padding:12px 18px;" %>
     </div> 
   </div>

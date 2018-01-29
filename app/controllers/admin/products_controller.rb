@@ -33,7 +33,7 @@ class Admin::ProductsController < ApplicationController
     def destroy
         @products.destroy
         redirect_to admin_products_path,alert: "#{@products.title}刪除成功!"
-    end    
+    end 
     private
     def find_products_id
         @products = Product.find(params[:id])
