@@ -19,5 +19,8 @@
 
 # Ignore Byebug command history file.
 .byebug_history
+#gitignore 設定不要上傳 database.yml
 config/database.yml
 public/uploads
+# Ignore application configuration
+/config/application.yml
