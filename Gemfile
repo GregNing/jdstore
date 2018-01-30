@@ -39,6 +39,7 @@ gem 'validates_email_format_of'
 gem 'will_paginate'
 gem 'rubocop', require: false
 gem "letter_opener", :group => :development
+gem 'aasm'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
