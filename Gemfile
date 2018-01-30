@@ -51,10 +51,9 @@ group :development, :test do
   gem 'awesome_rails_console'
 end
 
-gem 'pg', '~> 0.18'
-
 group :production do  
   gem 'rails_12factor'
+  gem 'pg', '~> 0.18'
 end
 
 group :development do
