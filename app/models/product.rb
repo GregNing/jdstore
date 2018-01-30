@@ -10,9 +10,11 @@
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #  user_id     :integer
-#  image      :string
+#  image       :string
 #
+
 class Product < ApplicationRecord
+    is_impressionable
     belongs_to :user
     validates :title, :description,presence: { message: "必填項目!" }
     validates :image, presence: { message: "必須上傳商品圖片!" }

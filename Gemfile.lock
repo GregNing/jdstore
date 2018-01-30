@@ -78,6 +78,7 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
     crass (1.0.3)
+    dalli (2.7.6)
     devise (4.4.0)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -254,6 +255,8 @@ GEM
       domain_name (~> 0.5)
     i18n (0.9.3)
       concurrent-ruby (~> 1.0)
+    impressionist (1.6.0)
+      nokogiri (~> 1)
     inflecto (0.0.2)
     ipaddress (0.8.3)
     jbuilder (2.7.0)
@@ -362,6 +365,8 @@ GEM
       ruby-progressbar (~> 1.7)
       unicode-display_width (~> 1.0, >= 1.0.1)
     ruby-progressbar (1.9.0)
+    rucaptcha (2.2.0)
+      railties (>= 3.2)
     sass (3.5.5)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -430,10 +435,12 @@ DEPENDENCIES
   byebug
   carrierwave
   coffee-rails (~> 4.2)
+  dalli
   devise
   figaro
   fog
   font-awesome-rails
+  impressionist
   jbuilder (~> 2.5)
   jquery-rails
   letter_opener
@@ -445,6 +452,7 @@ DEPENDENCIES
   rails (~> 5.0.0)
   rails_12factor
   rubocop
+  rucaptcha
   sass-rails (~> 5.0)
   simple_form
   spring
